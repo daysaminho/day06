@@ -4,7 +4,7 @@ function displayAgentInfo(obj) {
     let firstName = obj.firstName;
     let lastName = obj.lastName;
 
-    let phrase = `MY NAME IS ${obj.lastName}, ${firstName} ${lastName} ! I'M THE AGENT ${code} AND I'M ${age} YEARS OLD.`
+    let phrase = `MY NAME IS ${obj.lastName}, ${obj.firstName} ${obj.lastName} ! I'M THE AGENT ${obj.code} AND I'M ${obj.age} YEARS OLD.`
 
     let p = document.querySelector('#container p'); 
     p.textContent = phrase; 
@@ -23,6 +23,6 @@ lastName : "Bond"
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     displayAgentInfo(agent);
 });
